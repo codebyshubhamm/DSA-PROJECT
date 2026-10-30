@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --warm-bg: #FBF9F5;
+  --warm-paper: #FFFFFF;
+  --warm-subtle: #F5EFEB;
+  --warm-border: #E6DDD4;
+  --warm-espresso: #28170D;
+  --warm-mocha: #6E5648;
+  --warm-terracotta: #C25E2E;
+  --warm-amber: #B45309;
+  --warm-sage: #3B694F;
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Warm Paper & Card Primitives */
+.warm-paper {
+  background: #FFFFFF;
+  border: 1px solid #E6DDD4;
+  box-shadow: 0 1px 3px rgba(62, 39, 27, 0.04), 0 4px 12px -2px rgba(62, 39, 27, 0.03);
+}
+
+.warm-card {
+  background: #FFFFFF;
+  border: 1px solid #E6DDD4;
+  box-shadow: 0 2px 6px -1px rgba(62, 39, 27, 0.05), 0 8px 20px -3px rgba(62, 39, 27, 0.04);
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.warm-card:hover {
+  border-color: #C8B9A9;
+  box-shadow: 0 4px 12px -2px rgba(62, 39, 27, 0.08), 0 14px 28px -4px rgba(62, 39, 27, 0.06);
+}
+
+/* Custom Warm Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFEB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8CBC0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B4A293;
+}
+
+/* C++ Syntax Highlighting - Warm Editorial Theme */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #A08C7D;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #7A6557;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #B45309;
+  font-weight: 500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: #3B694F;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #C25E2E;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #8C2D19;
+  font-weight: 600;
+}
+
+.token.function,
+.token.class-name {
+  color: #28170D;
+  font-weight: 600;
+}
+
+.token.variable {
+  color: #6E5648;
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
